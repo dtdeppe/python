@@ -1,4 +1,6 @@
 import os
+import random
+import string
 
 def renamefiles():
     #variables
@@ -12,8 +14,9 @@ def renamefiles():
     savedpath=os.getcwd()
     print("current working directory is: ",savedpath)
     for filename in filelist:
-        os.rename(filename, filename.strip("0123456789"))
+        numberstring = random.choice(string.digits) + random.choice(string.digits)
+        os.rename(filename,numberstring+filename)
         print("Old name: ",filename)
-        print("New name: ",filename.strip("0123456789"))
+        print("New name: ",numberstring+filename)
         
 renamefiles()
