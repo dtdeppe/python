@@ -2,7 +2,7 @@ import os
 
 def renamefiles():
     #variables
-    path="/Users/ddeppe/Downloads/prank"
+    path="/Users/ddeppe/Downloads/message"
     #get file names from a folder
     filelist = os.listdir(path)
     print (filelist)
